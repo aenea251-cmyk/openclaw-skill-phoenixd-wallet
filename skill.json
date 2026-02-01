@@ -1,0 +1,17 @@
+{
+  "name": "phoenixd-wallet",
+  "version": "0.1.5",
+  "description": "OpenClaw skill for setting up and operating ACINQ phoenixd (Lightning wallet daemon) via phoenix-cli. Includes local QR generation and safe payout helper (verify invoice amount before paying).",
+  "homepage": "https://github.com/aenea251-cmyk/openclaw-skill-phoenixd-wallet",
+  "files": {
+    "SKILL.md": "https://raw.githubusercontent.com/aenea251-cmyk/openclaw-skill-phoenixd-wallet/master/phoenixd-wallet/SKILL.md",
+    "skill.md": "https://raw.githubusercontent.com/aenea251-cmyk/openclaw-skill-phoenixd-wallet/master/skill.md"
+  },
+  "metadata": {
+    "openclaw": {
+      "category": "payments",
+      "vendor": "ACINQ",
+      "project": "phoenixd"
+    }
+  }
+}

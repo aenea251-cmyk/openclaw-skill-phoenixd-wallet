@@ -1,52 +1,46 @@
-# phoenixd-wallet (OpenClaw skill)
+---
+name: phoenixd-wallet
+version: 0.1.5
+description: Set up and operate an ACINQ phoenixd Lightning wallet daemon (download/release install, run, and interact via phoenix-cli). Includes local QR generation and a safe payout helper (verify invoice amount before paying).
+homepage: https://github.com/aenea251-cmyk/openclaw-skill-phoenixd-wallet
+metadata: {"openclaw":{"category":"payments","vendor":"ACINQ","project":"phoenixd"}}
+---
 
-This repo contains an OpenClaw skill that teaches an agent how to **set up and operate an ACINQ phoenixd Lightning wallet**.
+# phoenixd-wallet
 
-## One-file setup instructions (raw link)
+OpenClaw skill for installing and operating **ACINQ phoenixd** (Lightning wallet daemon) via **phoenix-cli**.
 
-If you want a single copy-pasteable file, use this raw link:
+## Skill Files
 
-https://raw.githubusercontent.com/aenea251-cmyk/openclaw-skill-phoenixd-wallet/master/phoenixd-wallet/SKILL.md
+| File | URL |
+|------|-----|
+| **SKILL.md** (canonical instructions) | https://raw.githubusercontent.com/aenea251-cmyk/openclaw-skill-phoenixd-wallet/master/phoenixd-wallet/SKILL.md |
+| **skill.md** (this file, one-file entrypoint) | https://raw.githubusercontent.com/aenea251-cmyk/openclaw-skill-phoenixd-wallet/master/skill.md |
+| **skill.json** (metadata) | https://raw.githubusercontent.com/aenea251-cmyk/openclaw-skill-phoenixd-wallet/master/skill.json |
+| **Releases** (.skill download) | https://github.com/aenea251-cmyk/openclaw-skill-phoenixd-wallet/releases |
 
-That file includes:
-- Download + extract phoenixd from GitHub releases
-- Run the daemon
-- Use `phoenix-cli` for `getinfo`, `createinvoice`, `decodeinvoice`, `payinvoice`, `sendtoaddress`
-- Local QR generation for invoices
-- A safe payout helper that verifies invoice amount before paying
+## Setup / Install
 
-## Install the skill
+### Option A: Import into OpenClaw
 
-Download the `.skill` file from the latest release:
-
+1) Download the `.skill` file from Releases:
 https://github.com/aenea251-cmyk/openclaw-skill-phoenixd-wallet/releases
 
-Then import it into OpenClaw.
+2) Import it into OpenClaw (Skills → Import).
 
-## Quick start (manual install without OpenClaw)
-
-If you just want phoenixd itself (outside of OpenClaw), the core commands are:
+### Option B: Install locally by fetching the raw SKILL.md
 
 ```bash
-VERSION=0.7.2
-TARGET=linux-x64   # or linux-arm64
-
-wget "https://github.com/ACINQ/phoenixd/releases/download/v${VERSION}/phoenixd-${VERSION}-${TARGET}.zip"
-unzip -j "phoenixd-${VERSION}-${TARGET}.zip"
-chmod +x phoenixd phoenix-cli
-
-./phoenixd
+mkdir -p ~/.openclaw/skills/phoenixd-wallet
+curl -s https://raw.githubusercontent.com/aenea251-cmyk/openclaw-skill-phoenixd-wallet/master/phoenixd-wallet/SKILL.md > ~/.openclaw/skills/phoenixd-wallet/SKILL.md
 ```
 
-And in another terminal:
+### Then
 
-```bash
-./phoenix-cli getinfo
-```
+Read and follow:
+https://raw.githubusercontent.com/aenea251-cmyk/openclaw-skill-phoenixd-wallet/master/phoenixd-wallet/SKILL.md
 
-## Files in this repo
+## Join Moltbook
 
-- `phoenixd-wallet/SKILL.md` — the actual skill instructions (treat this as the canonical docs)
-- `phoenixd-wallet/scripts/` — helper scripts (QR generation, safe payment)
-- `phoenixd-wallet/references/` — extra references (e.g. systemd example)
-- `dist/phoenixd-wallet.skill` — packaged skill artifact (also attached to releases)
+To join Moltbook, follow the official instructions:
+https://moltbook.com/skill.md
