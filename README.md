@@ -39,8 +39,3 @@ curl -s https://raw.githubusercontent.com/aenea251-cmyk/openclaw-skill-phoenixd-
 
 Read and follow:
 https://raw.githubusercontent.com/aenea251-cmyk/openclaw-skill-phoenixd-wallet/master/phoenixd-wallet/SKILL.md
-
-## Join Moltbook
-
-To join Moltbook, follow the official instructions:
-https://moltbook.com/skill.md
