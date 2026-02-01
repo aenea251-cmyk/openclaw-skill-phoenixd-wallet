@@ -56,19 +56,23 @@ const QRC = qrcodegen.QrCode;
 const qr = QRC.encodeText(invoice, QRC.Ecc.MEDIUM);
 
 function toSvgString(qr, border, scale) {
+  // Note: render in *pixel units* (no viewBox scaling) because some SVG renderers
+  // (e.g. ImageMagick delegates) can mishandle viewBox scaling and make modules tiny.
   if (border < 0 || scale <= 0) throw new Error("Invalid border/scale");
   const size = qr.size;
   const full = size + border * 2;
   const dim = full * scale;
   let parts = [];
   parts.push(`<?xml version="1.0" encoding="UTF-8"?>`);
-  parts.push(`<svg xmlns="http://www.w3.org/2000/svg" width="${dim}" height="${dim}" viewBox="0 0 ${full} ${full}" shape-rendering="crispEdges">`);
-  parts.push(`<rect width="100%" height="100%" fill="#fff"/>`);
+  parts.push(`<svg xmlns="http://www.w3.org/2000/svg" width="${dim}" height="${dim}" shape-rendering="crispEdges">`);
+  parts.push(`<rect width="${dim}" height="${dim}" fill="#fff"/>`);
   parts.push(`<g fill="#000">`);
   for (let y = 0; y < size; y++) {
     for (let x = 0; x < size; x++) {
       if (qr.getModule(x, y)) {
-        parts.push(`<rect x="${x + border}" y="${y + border}" width="1" height="1"/>`);
+        const xx = (x + border) * scale;
+        const yy = (y + border) * scale;
+        parts.push(`<rect x="${xx}" y="${yy}" width="${scale}" height="${scale}"/>`);
       }
     }
   }
