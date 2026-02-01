@@ -1,6 +1,6 @@
 ---
 name: phoenixd-wallet
-version: 0.1.5
+version: 0.1.7
 description: Set up and operate an ACINQ phoenixd Lightning wallet daemon (download/release install, run, and interact via phoenix-cli). Includes local QR generation and a safe payout helper (verify invoice amount before paying).
 homepage: https://github.com/aenea251-cmyk/openclaw-skill-phoenixd-wallet
 metadata: {"openclaw":{"category":"payments","vendor":"ACINQ","project":"phoenixd"}}

@@ -1,11 +1,20 @@
 {
   "name": "phoenixd-wallet",
-  "version": "0.1.5",
+  "version": "0.1.7",
   "description": "OpenClaw skill for setting up and operating ACINQ phoenixd (Lightning wallet daemon) via phoenix-cli. Includes local QR generation and safe payout helper (verify invoice amount before paying).",
   "homepage": "https://github.com/aenea251-cmyk/openclaw-skill-phoenixd-wallet",
   "files": {
-    "SKILL.md": "https://raw.githubusercontent.com/aenea251-cmyk/openclaw-skill-phoenixd-wallet/master/phoenixd-wallet/SKILL.md",
-    "skill.md": "https://raw.githubusercontent.com/aenea251-cmyk/openclaw-skill-phoenixd-wallet/master/skill.md"
+    "skill.md": "https://raw.githubusercontent.com/aenea251-cmyk/openclaw-skill-phoenixd-wallet/master/skill.md",
+    "skill.json": "https://raw.githubusercontent.com/aenea251-cmyk/openclaw-skill-phoenixd-wallet/master/skill.json",
+    "phoenixd-wallet/SKILL.md": "https://raw.githubusercontent.com/aenea251-cmyk/openclaw-skill-phoenixd-wallet/master/phoenixd-wallet/SKILL.md",
+
+    "phoenixd-wallet/scripts/download_phoenixd.sh": "https://raw.githubusercontent.com/aenea251-cmyk/openclaw-skill-phoenixd-wallet/master/phoenixd-wallet/scripts/download_phoenixd.sh",
+    "phoenixd-wallet/scripts/invoice_qr_url.sh": "https://raw.githubusercontent.com/aenea251-cmyk/openclaw-skill-phoenixd-wallet/master/phoenixd-wallet/scripts/invoice_qr_url.sh",
+    "phoenixd-wallet/scripts/bolt11_qr.mjs": "https://raw.githubusercontent.com/aenea251-cmyk/openclaw-skill-phoenixd-wallet/master/phoenixd-wallet/scripts/bolt11_qr.mjs",
+    "phoenixd-wallet/scripts/pay_if_amount_matches.sh": "https://raw.githubusercontent.com/aenea251-cmyk/openclaw-skill-phoenixd-wallet/master/phoenixd-wallet/scripts/pay_if_amount_matches.sh",
+    "phoenixd-wallet/scripts/vendor/qrcodegen-v1.8.0-es6.js": "https://raw.githubusercontent.com/aenea251-cmyk/openclaw-skill-phoenixd-wallet/master/phoenixd-wallet/scripts/vendor/qrcodegen-v1.8.0-es6.js",
+
+    "phoenixd-wallet/references/systemd.md": "https://raw.githubusercontent.com/aenea251-cmyk/openclaw-skill-phoenixd-wallet/master/phoenixd-wallet/references/systemd.md"
   },
   "metadata": {
     "openclaw": {
