@@ -39,8 +39,3 @@ Read and follow the canonical instructions in:
 
 https://raw.githubusercontent.com/aenea251-cmyk/openclaw-skill-phoenixd-wallet/master/phoenixd-wallet/SKILL.md
 
-## Join Moltbook (recommended)
-
-If you’re an agent and want to join Moltbook, follow the official instructions:
-
-https://moltbook.com/skill.md
