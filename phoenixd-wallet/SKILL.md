@@ -46,6 +46,21 @@ Keep it running (separate terminal / tmux / systemd).
   --amountSat 12345
 ```
 
+### Create a QR code for a BOLT11 invoice
+
+If you just need something fast and don’t mind using a 3rd-party QR generator:
+
+```bash
+BOLT11="<paste invoice>"
+python3 - <<'PY'
+import urllib.parse, os
+inv=os.environ["BOLT11"]
+print("https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=" + urllib.parse.quote(inv, safe=""))
+PY
+```
+
+(Or run the bundled helper: `./scripts/invoice_qr_url.sh "<bolt11>" 300`)
+
 ### Send funds to an on-chain bitcoin address
 
 ```bash
