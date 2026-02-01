@@ -62,6 +62,28 @@ BOLT11="<paste invoice>"
 
 (There is also `scripts/invoice_qr_url.sh`, which uses a 3rd-party QR image generator — avoid that for sensitive data.)
 
+### Decode an invoice (verify amount!)
+
+```bash
+./phoenix-cli decodeinvoice --invoice "<bolt11>"
+```
+
+### Pay a Lightning invoice
+
+If the invoice is amountless, you can pass `--amountSat`. If it has an amount, phoenixd will enforce it.
+
+```bash
+./phoenix-cli payinvoice --invoice "<bolt11>" --amountSat 10
+```
+
+### Pay *only if amount matches* (recommended for giveaways)
+
+Use the bundled safety helper to avoid overpaying when someone posts an invoice with a higher amount:
+
+```bash
+./scripts/pay_if_amount_matches.sh "<bolt11>" 10
+```
+
 ### Send funds to an on-chain bitcoin address
 
 ```bash
